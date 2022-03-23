@@ -27,6 +27,7 @@
 .page .cards-list__item > div {
   border-radius: 25px;
   border: 1px solid blue;
+  cursor:pointer;
 }
 .page .cards-list__item:last-child {
   margin-right: 0;
