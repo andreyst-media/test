@@ -18,11 +18,11 @@
   margin: 30px -30px -30px -30px;
 }
 .page .cards-list__item {
-  width: 18%;
   padding: 30px;
-  height: 250px;
+  width:150px;
+  height: 150px;
   text-align: center;
-  line-height: 250px;
+  line-height: 150px;
 }
 .page .cards-list__item > div {
   border-radius: 25px;
