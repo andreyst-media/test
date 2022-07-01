@@ -1,103 +1,74 @@
-.page {
-  padding: 20px;
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer,
+header, main, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, input, button, textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
-.page .add-btn {
-  display: inline-block;
-  padding: 15px 20px;
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background: #f3e771;
+}
+.container .pop-up {
+  display: none;
+  flex-direction: column;
+  width: 66vw;
+  height: 66vh;
+}
+.container .pop-up__top {
+  flex: 0 0 40%;
+  padding-top: 30px;
   text-align: center;
-  border: 1px solid blue;
-  border-radius: 5px;
+  background: #dadfe5;
 }
-.page .checkbox {
-  display: block;
-  margin: 30px 0 0 0;
+.container .pop-up__top .top-title {
+  margin-bottom: 15px;
 }
-.page .cards-list {
+.container .pop-up__bottom {
+  flex: 0 0 60%;
+  padding: 40px 50px;
+  background: #fff;
+}
+.container .pop-up__bottom .list {
   display: flex;
   flex-wrap: wrap;
-  margin: 30px -30px -30px -30px;
+  margin: -10px;
 }
-.page .cards-list__item {
-  padding: 30px;
-  width:150px;
+.container .pop-up__bottom .list-item {
+  flex: 0 0 25%;
+  padding: 10px;
+}
+.container .pop-up__bottom .list-item__pic {
   height: 150px;
+  margin: 0 0 10px 0;
+  background: #dadfe5;
+}
+.container .pop-up.open {
+  display: flex;
+}
+
+#button {
+  width: 140px;
+  padding: 15px 0;
   text-align: center;
-  line-height: 150px;
-}
-.page .cards-list__item > div {
-  border-radius: 25px;
-  border: 1px solid blue;
-  cursor:pointer;
-}
-.page .cards-list__item:last-child {
-  margin-right: 0;
-}
-.page .cards-list.checked .cards-list__item:nth-child(2n) div {
-  color: #ffffff;
-  background: grey;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
   border: none;
 }
-.page .popup {
+#button.hidden {
   display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-.page .popup__inner {
-  display: flex;
-  align-self: center;
-  margin: 0 auto;
-  height: 40%;
-  width: 100%;
-  position: relative;
-  max-width: 300px;
-  background: #ffffff;
-  border-radius: 25px;
-}
-.page .popup__inner span {
-  display: block;
-  align-self: center;
-  margin: 0 auto;
-}
-.page .popup__inner .close-button {
-  display: block;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  background: white;
-}
-.page .popup__inner .close-button:before {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 20px;
-  position: absolute;
-  top: 3px;
-  left: 14px;
-  transform: rotate(45deg);
-  background: #333333;
-}
-.page .popup__inner .close-button:after {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 20px;
-  position: absolute;
-  top: 3px;
-  right: 11px;
-  transform: rotate(-45deg);
-  background: #333333;
-}
-.page .popup.d-flex {
-  display: flex;
-  background: rgba(0, 0, 0, 0.4);
-}
-.page .popup.opacity {
-  opacity: 1;
 }
