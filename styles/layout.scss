@@ -1,0 +1,236 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+  font-display: fallback;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, main, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, input, button, textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 0 0 54px 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.17;
+  color: $main_text_color;
+  background: $white_color;
+
+  @media all and #{$tablet}{
+    padding-bottom: 15px;
+  }
+}
+
+main {
+  flex: 1 1;
+}
+
+button {
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  outline: 0;
+  color: $main_text_color;
+  background-color: transparent;
+  border-color: transparent;
+
+  .icon {
+    fill: $grey_color;
+  }
+
+  &:hover {
+    color: $pink_hover_color;
+
+    .icon {
+      fill: $pink_hover_color;
+
+      &.icon-point {
+        fill: transparent;
+        stroke: $pink_hover_color;
+      }
+    }
+  }
+}
+
+button, input[type="submit"] {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: $main_text_color;
+
+  .icon {
+    fill: $grey_color;
+  }
+
+  &:hover {
+    color: $pink_hover_color;
+
+    .icon {
+      fill: $pink_hover_color;
+
+      &.icon-phone, &.icon-mail,&.icon-point {
+        fill: transparent;
+        stroke: $pink_hover_color;
+      }
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1190px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media all and #{$mobile}{
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+.icon {
+  display: block;
+  fill: $grey_color;
+
+  &.icon-point, &.icon-phone, &.icon-mail {
+    stroke: $grey_color;
+    fill: transparent;
+  }
+}
+
+.section {
+  margin: 36px 0 0 0;
+
+  @media all and #{$mobile}{
+    margin-top: 24px;
+  }
+}
+
+.page-banner {
+
+  &__picture {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 32px;
+    background: transparent;
+    box-shadow: 0 6px 30px 4px rgba(32, 32, 32, 0.1);
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.text-container {
+  width: 100%;
+  max-width: 1080px;
+}
+
+.h1 {
+  margin: 0 0 18px 0;
+  font-weight: 700;
+  font-size: 36px;
+  color: $main_text_color;
+  font-style: normal;
+
+  @media all and #{$mobile}{
+    margin-bottom: 12px;
+    font-size: 24px;
+  }
+}
+
+.date-subtitle {
+  margin: 0 0 24px 0;
+  font-weight: 400;
+  font-size: 22px;
+  color: #939393;
+
+  @media all and #{$mobile}{
+    font-size: 18px;
+  }
+}
+
+.text {
+  margin: 14px 0 0 0;
+  font-size: 18px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  @media all and #{$mobile}{
+    font-size: 16px;
+  }
+}
+
+.owl-carousel {
+
+  .owl-nav {
+    position: absolute;
+    top: calc(50% - 9px);
+    right: 0;
+    left: 0;
+
+    button.owl-prev, button.owl-next {
+      position: absolute;
+      right: 0;
+      width: 18px;
+      height: 18px;
+      border: 1px solid $grey_color;
+      border-radius: 50%;
+      background: $white_color url("../svg/nav-arrow.svg") 50% 50% no-repeat;
+
+      span {
+        display: none;
+      }
+
+      &.disabled {
+        display: none;
+      }
+    }
+
+    button.owl-prev {
+      right: unset;
+      left: 0;
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+  }
+}

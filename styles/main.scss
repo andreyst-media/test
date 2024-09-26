@@ -1,0 +1,525 @@
+.header {
+
+  &-top {
+    padding: 8px 0;
+    border-bottom: 2px solid $light_grey_color;
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    a, button {
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin: 0 6px 0 0;
+      }
+    }
+
+    .header-top__logo {
+      display: none;
+    }
+
+    &__left {
+      display: flex;
+      align-items: center;
+
+      .city-selector {
+        margin: 0 36px 0 0;
+      }
+    }
+
+    @media all and #{$mobile}{
+      display: none;
+    }
+  }
+
+  &-middle {
+    padding: 20px 0;
+
+    .container {
+      display: flex;
+
+      @media all and #{$mobile}{
+        flex-wrap: wrap;
+      }
+    }
+
+    &__logo {
+      display: flex;
+      flex: 0 0 16.3%;
+      margin: 0 4.4% 0 0;
+      height: auto;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      @media all and #{$tablet}{
+        flex-basis: 21.2%;
+        margin-right: 0;
+      }
+
+      @media all and #{$tablet}{
+        flex-basis: 149px;
+      }
+    }
+
+    &__burger {
+      display: none;
+      align-self: center;
+      align-items: center;
+      flex: 0 0 24px;
+      margin: 24px 0 0 0;
+      height: 17px;
+      border-top: 2.2px solid $grey_color;
+      border-bottom: 2.2px solid $grey_color;
+
+      span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background: $grey_color;
+      }
+
+      &:hover {
+        border-top: 2.2px solid $pink_hover_color;
+        border-bottom: 2.2px solid $pink_hover_color;
+
+        span {
+          background: $pink_hover_color;
+        }
+      }
+
+      @media all and #{$mobile}{
+        display: flex;
+        order: 3;
+      }
+    }
+
+    &__search {
+      flex-grow: 1;
+
+      input {
+        display: block;
+        width: 100%;
+        padding: 0 0 0 50px;
+        font-size: 16px;
+        line-height: 42px;
+        border: 2px solid #ddd;
+        border-radius: 100px;
+        background: url("../svg/search-icon.svg") 18px 50%/26px no-repeat;
+
+        &::placeholder {
+          font-size: 16px;
+          color: $grey_color;
+
+          @media all and #{$mobile}{
+            font-size: 14px;
+          }
+        }
+
+        @media all and #{$mobile}{
+          padding-left: 39px;
+          font-size: 14px;
+          line-height: 34px;
+          background-size: 18px;
+          background-position-x: 16px;
+        }
+      }
+
+      @media all and #{$tablet}{
+        margin: 0 33px;
+        padding: 0 0 0 15px;
+      }
+
+      @media all and #{$mobile}{
+        flex-basis: calc(100% - 47px);
+        order: 4;
+        margin-top: 25px;
+        margin-right: 0;
+        margin-left: 15px;
+        padding-left: 0;
+      }
+    }
+
+    @media all and #{$tablet}{
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    @media all and #{$mobile}{
+      padding-top: 24px;
+      padding-bottom: 18px;
+    }
+  }
+
+  &-menu {
+    @media all and #{$tablet}{
+      overflow: hidden;
+    }
+  }
+
+  &-mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 48px 0;
+    background: $white_color;
+    z-index: 10;
+    overflow-y: auto;
+
+    .mobile-menu-close {
+      position: absolute;
+      top: 18px;
+      right: 10px;
+
+      svg {
+        stroke: $grey_color;
+      }
+
+      &:hover {
+
+        svg {
+          stroke: $pink_hover_color;
+        }
+      }
+    }
+
+    .h1 {
+      padding: 0 10px;
+    }
+
+    .sections-menu {
+      margin: 18px 0 0 0;
+
+      .section-item {
+        display: flex;
+        align-items: center;
+        padding: 8px 10px;
+        border-bottom: 2px solid $light_grey_color;
+
+        &__picture {
+          flex: 0 0 32px;
+
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+
+        &__text {
+          flex-grow: 1;
+          margin: 0 12px 0 8px;
+        }
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  margin: -5px 0 0 27px;
+
+  &__item {
+    margin: 0 24px 0 0;
+
+    svg {
+      margin: 0 auto;
+
+      &.icon {
+
+        @media all and #{$tablet}{
+          width: 1.5em;
+          height: 1.5em;
+        }
+      }
+    }
+
+    span {
+      display: block;
+      margin: 2px 0 0 0;
+
+      @media all and #{$tablet}{
+        display: none;
+      }
+    }
+
+    &--medium {
+
+      @media all and #{$mobile}{
+        display: none;
+      }
+    }
+
+    &--small {
+      display: none;
+
+      @media all and #{$mobile}{
+        display: block;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media all and #{$tablet}{
+      margin-right: 30px;
+    }
+
+    @media all and #{$mobile}{
+      margin-right: 21px;
+    }
+  }
+
+  @media all and #{$tablet}{
+    margin-right: 8px;
+    margin-left: 0;
+  }
+
+  @media all and #{$mobile}{
+    justify-content: flex-end;
+    flex-basis: calc(100% - 149px);
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.scroll-menu {
+  position: relative;
+
+  &.owl-carousel {
+
+    .owl-stage-outer {
+
+      @media all and #{$tablet}{
+        overflow: visible;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    color: $main_text_color;
+    white-space: nowrap;
+
+    &--hovered {
+      color: $pink_hover_color;
+    }
+
+    svg {
+      margin: 0 6px 0 0;
+    }
+  }
+}
+
+.footer {
+  margin: 96px 0 0 0;
+  background: #f4f4f4;
+
+  &-fixed {
+    display: none;
+    padding: 13px 10px 11px 10px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -3px 13px 0 rgba(146, 146, 146, 0.25);
+    background: #fff;
+
+    &__item {
+      font-weight: 400;
+      font-size: 10px;
+      color: $main_text_color;
+
+      svg {
+        margin: 0 auto 4px auto;
+      }
+
+      &--active {
+        color: $pink_hover_color;
+
+        svg {
+          fill: $pink_hover_color;
+        }
+      }
+    }
+
+    &.visible {
+
+      @media all and #{$mobile}{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 36px 0 18px 0;
+
+    &__list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-grow: 1;
+      max-width: 443px;
+
+      @media all and #{$tablet}{
+        max-width: 328px;
+      }
+    }
+
+    &__contacts {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-grow: 1;
+      max-width: 344px;
+
+      a {
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin: 0 10px 0 0;
+
+          @media all and #{$mobile}{
+            height: 1.2em;
+            width: 1.2em;
+          }
+        }
+
+        &:last-child {
+          @media all and #{$mobile}{
+            margin-top: 13px;
+          }
+        }
+      }
+
+      @media all and #{$tablet}{
+        margin-top: 24px;
+        max-width: 306px;
+      }
+
+      @media all and #{$mobile}{
+        display: block;
+      }
+    }
+
+    @media all and #{$tablet}{
+      display: block;
+    }
+
+    @media all and #{$mobile}{
+      padding-top: 27px;
+      padding-bottom: 13px;
+    }
+  }
+
+  &-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+
+    &__copyright {
+      font-size: 14px;
+      line-height: 1.43;
+      color: $grey_color;
+
+      @media all and #{$mobile}{
+        margin-top: 24px;
+        font-size: 12px;
+        line-height: 150%;
+      }
+    }
+
+    &__socials {
+      display: grid;
+      grid-template-columns:repeat(3, 40px);
+      grid-gap: 12px;
+
+      .social-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        background: $white_color;
+        border-radius: 50%;
+        border: 1px solid $grey_color;
+
+        svg {
+          @media all and #{$mobile}{
+            height: 1.1em;
+            width: 1.1em;
+          }
+        }
+
+        &:hover {
+          border-color: $pink_hover_color;
+
+          svg {
+            fill: $pink_hover_color;
+          }
+        }
+
+        @media all and #{$mobile}{
+          height: 30px;
+        }
+      }
+
+      @media all and #{$tablet}{
+        position: absolute;
+        top: 36px;
+        right: 20px;
+      }
+
+      @media all and #{$mobile}{
+        position: unset;
+        grid-template-columns:repeat(3, 30px);
+      }
+    }
+
+    @media all and #{$tablet}{
+      padding-top: 6px;
+    }
+
+    @media all and #{$mobile}{
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      padding-top: 0;
+    }
+  }
+
+  @media all and #{$tablet}{
+    margin-top: 70px;
+    position: relative;
+  }
+
+  @media all and #{$mobile}{
+    margin-top: 50px;
+    font-size: 14px;
+  }
+}
+
